@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background: linear-gradient(180deg, #0089ED 50%, white 50%);
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+}
+.container-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px 15px;
+    grid-template-areas:
+        "greeting-text form"
+        "login-as form";
+    width: 100%;
+    height: 100%;
+}
+
+.greeting-text {
+    grid-area: greeting-text;
+    box-sizing: border-box;
+    padding: 60px;
+}
+
+.logo{
+    display: none;
+}
+.form{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+  .sign-up-form {
+      box-shadow: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 85vh;
+    width: 70%;
+    border-radius: 40px;
+    background-color: white;
+    box-shadow: 0px 5px 5px 1px #d6d6d6;
+    box-sizing: border-box;
+    padding: 45px 44px 80px; }
+.form {
+    grid-area: form;
+}
+.inputStyle{
+    padding: 15px;
+    border-radius: 9px;    
+}
+
+.linkButtonStyle{
+    padding: 13px;
+    border-radius: 9px;  
+    background-color: #F6F6F6;  
+    i{
+        font-size: 20px;
+
+    }
+}
+.linkButtonStyleGoogle{
+    color: #4285F4;
+    background-color: #E9F1FF;  
+}
+
+.login-as {
+    grid-area: login-as;
+    box-sizing: border-box;
+    padding: 60px;
+}
+.box1{
+    width: fit-content;
+    background-color: #EFF8FF;
+    cursor: pointer;
+    border-radius: 9px;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 11px 15px;
+    button{
+        align-self: flex-end;
+        width: 25px;
+        height: 25px;
+        background: 0;
+        font-size: 13px;
+        border-radius: 50%;
+        border: 2px grey solid;
+        margin-right: 5px;
+    }
+    h5{
+        margin-top: 7px;
+    }
+    p{
+        color: grey;
+    }
+    img{
+        width: 50%;
+        
+    }
+    &:hover{
+        background-color:#cce9ff ;
+    }
+}
+
+.form-text p{
+        font-size: 22px;
+   
+}
+.form-text p span{
+    font-size: 22px;
+    font-weight: 600;
+    color: #0089ED
+}
+.form-text h2{
+    font-size: 55px;
+}
+@media screen and (max-width:1000px) {
+    .container-grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "form"
+        ;
+    }
+    .greeting-text, .login-as{
+        display: none;
+    }
+    .logo{
+        display: initial;
+    }
+    
+}
+
+@media screen and (max-width:600px) {
+    .sign-up-form {
+        width: 90%;
+    
+    }  
+    .linkButtonStyleGoogle{
+        font-size: 12px;
+    } 
+    .linkButtonStyle{
+        font-size: 12px;
+    } 
+    .form-text p{
+        font-size: 16px;
+   
+    }
+    .form-text p span{
+        font-size: 16px;
+    }
+    .form-text h2{
+        font-size: 40px;
+    }
+    .noAccount-text{
+        font-size: 13px;
+    }
+}
